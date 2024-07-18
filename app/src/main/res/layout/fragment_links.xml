@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#0E6FFF"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.frag.links.LinksFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:text="@string/dashboard"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="TODO"
+                android:padding="16dp"
+                android:src="@drawable/settings" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_background"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <TextView
+                android:id="@+id/greet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="#999CA0"
+                android:textSize="16sp"
+                android:text="Good Morning" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:text="Prateek Singh 👋" />
+
+            <include
+                android:id="@+id/stats"
+                layout="@layout/card_stats" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Analytics"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                app:cornerRadius="8dp"
+                android:drawableLeft="@drawable/baseline_auto_graph_24"
+                style="?attr/materialButtonOutlinedStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="16dp">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_tablayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:tabIndicator="@drawable/tab_selected"
+                    android:backgroundTint="@android:color/transparent"
+                    app:tabMode="fixed"
+                    android:layout_gravity="center_vertical"
+                    app:tabIndicatorAnimationMode="elastic"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabIndicatorGravity="stretch"
+                    app:tabGravity="fill"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="TODO"
+                    android:padding="16dp"
+                    android:src="@drawable/search" />
+
+            </LinearLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/tab_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View all Links"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                app:cornerRadius="8dp"
+                android:textAllCaps="false"
+                android:drawableLeft="@drawable/link"
+                style="?attr/materialButtonOutlinedStyle" />
+
+
+            <Button
+                android:id="@+id/whatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Talk with us"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="26dp"
+                android:padding="16dp"
+                app:cornerRadius="8dp"
+                android:textAllCaps="false"
+                app:strokeColor="#4AD15F"
+                android:textAlignment="textStart"
+                android:backgroundTint="#164AD15F"
+                android:drawableLeft="@drawable/whatsapp"
+                style="?attr/materialButtonOutlinedStyle" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Frequently Asked Questions"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="26dp"
+                android:padding="16dp"
+                app:cornerRadius="8dp"
+                android:textAllCaps="false"
+                app:strokeColor="#0E6FFF"
+                android:textAlignment="textStart"
+                android:backgroundTint="#160E6FFF"
+                android:drawableLeft="@drawable/question_mark"
+                style="?attr/materialButtonOutlinedStyle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

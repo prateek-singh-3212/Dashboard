@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_links"
+        android:icon="@drawable/link"
+        android:title="@string/title_link"/>
+
+    <item
+        android:id="@+id/navigation_courses"
+        android:icon="@drawable/magazine"
+        android:title="@string/title_courses"/>
+
+    <item
+        android:id="@+id/placeholde"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_campaings"
+        android:icon="@drawable/fast_forward"
+        android:title="@string/title_campaigns"/>
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/user"
+        android:title="@string/title_profile"/>
+
+</menu>
